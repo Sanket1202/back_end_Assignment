@@ -1,11 +1,11 @@
 def role_base_access(lis):
     def deco(func):
-        def inner(*args, **kwargs):
+        def inner(*args,**kwargs):
             user_input = input("enter the input:")
 
             if user_input in lis:
                 print("It is accessible...")
-                return func(*args, **kwargs)
+                return func(*args,**kwargs)
             else:
                 print("Its not accessible!!,Only admins can access")
 
@@ -15,7 +15,7 @@ def role_base_access(lis):
 
 
 class Access:
-    @role_base_access(['admin', 'name', 'password'])
+    @role_base_access(['admin', 'name', '161119'])
     def ordinary(self):
         print("Here that you can access:")
         details = [
